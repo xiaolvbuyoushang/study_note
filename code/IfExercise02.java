@@ -24,5 +24,25 @@ public class IfExercise02 {
 			System.out.println("和不能被3和5同时整除");
 		}
 
+		//判断一个年份是否是闰年，闰年的条件是符合下面二者之一 ：
+		//（1）年份能被4整除，但不能被100整除；（2）能被400整除
+		//
+		//思路分析
+		//1.定义 int year 保存年
+		//2.年份能被4整除，但不能被100整除，
+		//   => year % 4 == 0 && year % 100 != 400
+		//3. 能被400整除 => year % 400
+		//4. 上面的 2 和 3 是 或的关系
+		//代码实现
+
+		int year = 2020;
+		if( (year % 4 == 0 && year % 100 != 0) || (year % 400 ==0 ) ){
+			System.out.println(year + "是闰年");
+		}else{
+			System.out.println(year + "不是闰年");
+		}
+
+
+
 	}
 }
